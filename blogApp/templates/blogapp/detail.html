@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="{{article.slug}}">
+    <div class="blogpost-container">
+
+            <h1>{{ article.title }}</h1>
+            <p>
+                {{ article.content }}
+    </p>
+    <br>
+    <div class="publish-at">
+        {{ article.publishAt }}
+    </div>
+    <div class="go-back">
+        <a href="/">go back</a>
+    </div>
+</div>
+</a>
+
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .blogpost-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 400px;
+            text-align: center;
+            background-color: blueviolet;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 15px 5px 15px 5px;
+            box-shadow: 0 0 30px rgba(0,0,0,.8);
+            transform: scale(1);
+            transition: all .2s;
+        }
+        .blogpost-container:hover {
+            transform: scale(1.05);
+            background-color: violet;
+        }
+        .publish-at {
+            color: black;
+        }
+        a,p {
+            text-decoration: none;
+            color: snow;
+        }
+        .go-back{
+            align-self: flex-start;
+        }
+    </style>
+</body>
+</html>
